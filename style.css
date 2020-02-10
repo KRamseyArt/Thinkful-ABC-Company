@@ -21,3 +21,72 @@ body {
 .menu > .search > input {
   width: 50%;
 }
+
+
+@media screen and (min-width: 520px){
+  /*
+    > flex-grow : specifies how items grow relative to each other to occupy available space.
+
+    > flex-shrink : defines how items are shrunk to fit within the container if necessary. 
+
+    > flex-basis : defines the initial size of an item in the container.
+
+    > flex : shorthand simplification of these 3 properties
+    {
+      flex: 1 1 120px
+      [flex: (grow=1) (shrink=1) (basis=120px)]
+    }
+  */
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu > .item{
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    */
+    flex: 1 1;
+  }
+  .menu > .item > input{
+    width: 90%;
+  }
+  .menu > .search {
+    flex-grow: 2; /*grow twice as fast as others*/
+  }
+  .menu > .name {
+    /*
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 120px;
+    */
+    flex: 0 0 120px;
+
+  }
+  .menu > .logo {
+    /*
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 35px;
+    */
+    flex: 0 0 50px;
+  }
+  .menu > .sign_in {
+    /*
+    flex-grow: 0;
+    flex-shrink: 0;
+    */
+    flex: 0 0;
+  }
+  .menu > .sign_up {
+    /*
+    flex-grow: 0;
+    flex-shrink: 0;
+    */
+    flex: 0 0;
+    justify-self: flex-end;
+  }
+}
